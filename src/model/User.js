@@ -38,11 +38,11 @@ const UserScheme = new Schema({
     required: [true, "Verify code expiry is required"],
   },
   isVerified: {
-    type: Boolen,
+    type: Boolean,
     default: false,
   },
   isAcceptingMessage: {
-    type: Boolen,
+    type: Boolean,
     default: true,
   },
   messages: [MessageSchema],
