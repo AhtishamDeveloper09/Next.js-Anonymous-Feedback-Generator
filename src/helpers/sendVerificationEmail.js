@@ -4,7 +4,7 @@ import VerificationEmail from "../../emails/VerificationEmail";
 export async function sendVerificationEmail(email, username, verifyCode) {
   try {
     await resend.emails.send({
-      from: "anonymousfeedback.com",
+      from: "Anonymous <onboarding@resend.dev>",
       to: email,
       subject: "Anonymous Feedback Genetrator | Verification Code",
       react: VerificationEmail({ username, otp: verifyCode }),
