@@ -17,7 +17,7 @@ export async function GET(request) {
     };
 
     //validate with zod
-    const result = UsernameQuerySchema.safeParse(queryParam);
+    const result = UsernameQuerySchema.safeParse(queryParams);
     // console.log(result);
 
     if (!result.success) {
@@ -47,7 +47,7 @@ export async function GET(request) {
           success: false,
           message: "Username is already taken",
         },
-        { status: 200 }
+        { status: 400 }
       );
     }
 
